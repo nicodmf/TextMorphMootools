@@ -3,7 +3,7 @@ Fx.TextMorph
 
 Fx.TextMorph is a class that form text element.
 
-![Screenshot](http://github.com/nicodmf/TextMorph/raw/master/icon.png)
+![Screenshot](http://github.com/nicodmf/TextMorphMootools/raw/master/icon.png)
 
 Requirements
 ------------
