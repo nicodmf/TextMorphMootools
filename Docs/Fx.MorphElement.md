@@ -53,5 +53,3 @@ Morphing using an div:
 		height: 600,
 		lineHeight:15
 	});
-
-### See Also:
