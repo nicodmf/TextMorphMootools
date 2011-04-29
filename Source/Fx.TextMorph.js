@@ -7,7 +7,7 @@ requires:
     core/1.2.4:
 provides: [TextMorph]
 license: MIT-style license
-version: 1.0.0
+version: 1.0.1
 ...
  */
  
@@ -65,6 +65,8 @@ Fx.TextMorph = new Class({
 		this.changeOrigin();
 		this.placeContent();
 		this.drawForm();
+		//For chrome compatibility
+		this.firstChild.previousSibling.parentNode.removeChild(this.firstChild.previousSibling)
 	},
 	changeOrigin : function() {
 		$(this.element).setStyle('width', (this.width) + 'px');
@@ -82,7 +84,7 @@ Fx.TextMorph = new Class({
 		});
 		div = new Element("div", {
 			'class' : 'content',
-			'style' : 'margin-top:-' + this.height + 'px'
+			'style' : 'margin-top:-' + (this.height - this.lineHeight) + 'px'
 		});
 		while (this.element.hasChildNodes()) {
 			div.appendChild(this.element.removeChild(this.element.firstChild));
